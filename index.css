@@ -45,7 +45,7 @@ body {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 100px;
+    gap: 40px;
     margin-left: auto;
 }
 
