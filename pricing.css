@@ -30,14 +30,14 @@ p {
 
 /* Banner de fondo para el header */
 .banner-header {
-    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ajuste de ruta */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100px; /* Ajusta la altura según lo que necesites */
-    display: flex; /* Añade flexbox para organizar el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header {
@@ -65,8 +65,8 @@ p {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px; /* Espacio entre los enlaces */
-    margin-left: auto; /* Empuja los enlaces hacia la derecha */
+    gap: 20px;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -85,7 +85,8 @@ p {
     color: #AD8FFF;
     transform: scale(1.1);
 }
-/* Elimina cualquier margen superior adicional después del encabezado */
+
+/* Margen superior adicional después del encabezado */
 body, html {
     padding: 0;
     margin: 0;
@@ -100,33 +101,32 @@ body, html {
 .pricing-description {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Esto centrará el contenido horizontalmente */
-    justify-content: center; /* Centra verticalmente si el contenedor tiene altura */
-    text-align: center; /* Alinea todo el texto en el centro */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     margin-top: 200px;
-    margin-bottom: 10px; /* Espaciado inferior */
+    margin-bottom: 10px;
 }
 
 .logo-central {
     display: block;
-    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+    margin: 0 auto;
     max-width: 500px;
     height: auto;
-    animation: shrinkLogo 2s ease forwards; /* Aplica la animación */
+    animation: shrinkLogo 2s ease forwards;
 }
 
-/* Keyframes para la animación del logo (comienza más grande y se reduce al tamaño original) */
+/* Keyframes para la animación del logo */
 @keyframes shrinkLogo {
     0% {
         opacity: 0;
-        transform: scale(1.5); /* El logo comienza con 1.5 veces su tamaño */
+        transform: scale(1.5);
     }
     100% {
         opacity: 1;
-        transform: scale(1); /* El logo termina con su tamaño original */
+        transform: scale(1);
     }
 }
-
 
 /* Sección de Planes de Precios */
 .pricing {
@@ -185,8 +185,8 @@ body, html {
 
 .plan .price,
 .plan .initial {
-    color: #000000; /* Precio y pago inicial en negro */
-    font-weight: bold; /* Asegura que el texto del precio esté en negrita */
+    color: #000000;
+    font-weight: bold;
 }
 
 /* Ajuste de "Precio a Consultar" en plan personalizado */
@@ -194,7 +194,7 @@ body, html {
     color: #000000;
     font-weight: bold;
     font-size: 1.2em;
-    margin-top: 1.5rem; /* Ajusta para alinear con las otras tarjetas */
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 
@@ -204,7 +204,7 @@ body, html {
 }
 
 .plan ul li {
-    margin-bottom: 20px; /* Aumenta el espacio entre líneas */
+    margin-bottom: 20px;
     font-size: 1rem;
 }
 
@@ -302,8 +302,8 @@ body, html {
 .cta-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: auto; /* Alinea los botones al fondo de la tarjeta */
+    gap: 10px;
+    margin-top: auto;
 }
 
 /* Ajustes de los botones Ver Más y Contacto */
@@ -312,11 +312,11 @@ body, html {
     border-radius: 5px;
     font-size: 0.9rem;
     width: auto;
-    min-width: 80px; /* Mantiene el tamaño mínimo */
+    min-width: 80px;
     text-align: center;
-    color: #fff !important; /* Asegura el color blanco del texto */
-    text-decoration: none; /* Quita el subrayado de los enlaces */
-    border: none; /* Elimina el borde del botón */
+    color: #fff !important;
+    text-decoration: none;
+    border: none;
 }
 
 /* Sección de Servicios Adicionales */
@@ -355,8 +355,8 @@ body, html {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 20px;
-    width: 200px; /* Ajusta el tamaño cuadrado */
-    height: 200px; /* Ajusta el tamaño cuadrado */
+    width: 200px;
+    height: 200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -383,13 +383,12 @@ body, html {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Footer */
 .footer {
-    background-color: #333; /* Fondo oscuro */
+    background-color: #333;
     padding: 2rem;
     text-align: center;
-    color: white; /* Texto en blanco */
+    color: white;
 }
 
 .footer-content {
@@ -403,24 +402,24 @@ body, html {
 }
 
 .footer-content .socials a {
-    color: white; /* Iconos en blanco */
+    color: white;
     margin: 0 10px;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .footer-content .socials a:hover {
-    color: #00A9E0; /* Cambiar a color azul claro al pasar por encima */
+    color: #00A9E0;
 }
 
 .footer p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
-    color: white !important; /* Forzar el color blanco */
+    color: white !important;
 }
 
 .footer p a {
-    color: white !important; /* Asegura que los enlaces dentro del pie también sean blancos */
+    color: white !important;
     text-decoration: none;
 }
 
@@ -428,135 +427,77 @@ body, html {
     color: #00A9E0;
 }
 
-
 /* Responsiveness */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
         gap: 5px;
         text-align: center;
-        padding: 0; /* Quitar cualquier padding sobrante */
+        padding: 0;
     }
 
     .nav-links a {
-        font-size: 0.85rem; /* Reducir aún más el tamaño del texto */
-        padding: 5px 0;  /* Ajustar el padding de los enlaces */
+        font-size: 0.85rem;
+        padding: 5px 0;
     }
 
     .header {
-        padding: 0.5px 0;  /* Reducir más el padding en la cabecera */
+        padding: 0.5px 0;
     }
     
     .logo img {
-        width: 90px; /* Reducir el tamaño del logo para que ocupe menos espacio */
+        width: 90px;
     }
     
     .hero {
-        padding: 30px 20px; /* Reducir aún más el padding en móviles */
-        background: rgba(255, 255, 255, 0.95); /* Aumentar transparencia */
-        margin-top: 30px; /* Ajuste para que el contenido no se solape con el encabezado */
+        padding: 30px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        margin-top: 30px;
     }
 
     .hero h1 {
-        font-size: 1.6rem; /* Reducir el tamaño del título */
-        margin-bottom: 8px; /* Ajustar el margen inferior */
+        font-size: 1.6rem;
+        margin-bottom: 8px;
     }
 
     .hero p {
-        font-size: 0.95rem; /* Ajustar el tamaño del texto */
+        font-size: 0.95rem;
     }
 
     .cta-button {
-        padding: 6px 12px; /* Ajustar el botón */
-        font-size: 0.85rem; /* Reducir el tamaño de la fuente en el botón */
+        padding: 6px 12px;
+        font-size: 0.85rem;
     }
 
     /* Ajustes en la animación del fade-in */
     .fade-in {
-        margin-top: 20px; /* Añadir un margen superior al fade-in */
-        animation: fadeInEffect 1s ease-in-out; /* Aplicar el efecto de animación */
+        margin-top: 20px;
+        animation: fadeInEffect 1s ease-in-out;
     }
 
     @keyframes fadeInEffect {
         0% {
             opacity: 0;
-            transform: translateY(-20px); /* Comienza movido un poco hacia arriba */
+            transform: translateY(-20px);
         }
         100% {
             opacity: 1;
-            transform: translateY(0); /* Termina en su posición original */
+            transform: translateY(0);
         }
-    }
-
-    /* Ajustes en la integración de WhatsApp */
-    .whatsapp-integration h2 {
-        font-size: 1.2rem; /* Reducir el tamaño del encabezado */
-        margin-bottom: 12px; /* Ajustar margen inferior */
-    }
-
-    .whatsapp-integration p {
-        font-size: 0.9rem; /* Ajustar el tamaño del texto */
-        line-height: 1.3; /* Mejorar la legibilidad */
-        margin-bottom: 18px;
     }
 
     /* Ajustes en la sección de características */
     .features-grid {
-        flex-direction: column;  /* Colocar las características en una sola columna */
-        gap: 1rem;  /* Espaciado ajustado */
-    }
-
-    .feature-item i {
-        font-size: 1.8rem;  /* Reducir el tamaño de los íconos */
-    }
-
-    .feature-item h3 {
-        font-size: 1.1rem;  /* Reducir tamaño del texto */
-        margin-bottom: 8px; /* Ajustar márgenes */
-    }
-
-    .feature-item p {
-        font-size: 0.85rem; /* Ajustar el tamaño del texto */
-        margin-bottom: 8px;
-    }
-
-    /* Ajustes en la sección de testimonios */
-    .testimonials {
-        padding: 2.5rem 1rem; /* Reducir el padding */
-    }
-
-    .testimonials h2 {
-        font-size: 1.6rem; /* Reducir el tamaño del título */
-        margin-bottom: 1.2rem;
-    }
-
-    /* Ajustes en la sección de llamada a la acción */
-    .cta {
-        padding: 2.5rem 1rem;
-    }
-
-    .cta h2 {
-        font-size: 1.3rem; /* Reducir el título */
-        margin-bottom: 0.8rem;
-    }
-
-    .cta-button-secondary {
-        padding: 6px 12px; /* Ajustar el tamaño del botón */
-        font-size: 0.9rem;
-    }
-
-    /* Ajustes generales de imágenes */
-    img {
-        max-width: 100%;
-        height: auto; /* Asegurar que las imágenes se ajusten correctamente */
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .footer {
-        padding: 1rem; /* Menor padding en el pie de página */
+        padding: 1rem;
     }
 
     .footer-content p {
-        font-size: 0.7rem; /* Ajuste de texto del footer */
+        font-size: 0.7rem;
     }
 
     /* Menú desplegable móvil */
