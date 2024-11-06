@@ -381,6 +381,98 @@ body {
     font-size: 1rem;
 }
 
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco suave */
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0052A3;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slide p, .slide h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.slider-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-nav span {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    color: #0052A3;
+}
+
+.slider-nav span:hover {
+    color: #4B0082;
+}
+
+/* Call to Action - Final CTA */
+.final-cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #679dff; /* Fondo con color corporativo */
+    color: #ffffff;
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Texto en blanco para contraste */
+    margin-bottom: 20px;
+}
+
+.final-cta a.cta-button {
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #0073e6; /* Botón en tono más claro */
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s ease; /* Animación */
+    text-align: center;
+    display: inline-block;
+}
+
+/* Hover del botón */
+.final-cta a.cta-button:hover {
+    background-color: #69ffd1; /* Verde corporativo para el hover */
+    color: #333;
+    transform: scale(1.05);
+}
+
+
 /* Footer */
 .footer {
     background-color: #333;
