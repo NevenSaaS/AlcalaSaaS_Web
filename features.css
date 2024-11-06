@@ -20,18 +20,18 @@ body {
 
 /* Banner de fondo para el header */
 .banner-header {
-    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ajusta la ruta */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100px; /* Ajusta la altura según lo que necesites */
-    display: flex; /* Añade flexbox para organizar el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header {
-    background-color: #0052a5; /* Azul corporativo */
+    background-color: #0052a5;
     padding: 15px;
     text-align: center;
     position: fixed;
@@ -55,7 +55,7 @@ body {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px; /* Espacio entre los enlaces */
+    gap: 20px;
 }
 
 .nav-links li {
@@ -71,11 +71,10 @@ body {
 }
 
 .nav-links a:hover {
-    color: #AD8FFF; /* Cambio de color en hover */
+    color: #AD8FFF;
     transform: scale(1.1);
 }
 
-/* Ajuste del contenido después del header */
 .content {
     margin-top: 100px;
 }
@@ -96,7 +95,7 @@ body {
 
 .hero h1 {
     font-size: 2.8rem;
-    color: #0052a5; /* Azul corporativo */
+    color: #0052a5;
     margin-bottom: 20px;
 }
 
@@ -108,7 +107,7 @@ body {
 .cta-button {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #AD8FFF; /* Botón púrpura */
+    background-color: #AD8FFF;
     color: white;
     border-radius: 5px;
     font-size: 1.2rem;
@@ -117,29 +116,8 @@ body {
 }
 
 .cta-button:hover {
-    background-color: #679dff; /* Azul claro en hover */
+    background-color: #679dff;
     transform: scale(1.05);
-}
-
-/* Sección de servicios */
-.services {
-    padding: 60px 20px;
-    background: #f8f9fa;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5rem;
-    color: #679dff;
-    margin-bottom: 40px;
-}
-
-/* Contenedor de servicios */
-.services-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 /* Sección de servicios */
@@ -216,7 +194,7 @@ body {
     left: 50%;
     width: 70%;
     height: 70%;
-    background-image: url('/css/AZUL C.svg');
+    background-image: url('./AZUL C.svg'); /* Ajusta la ruta */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -227,14 +205,14 @@ body {
 }
 
 .flip-card-front h3 {
-    font-size: 1.4rem; /* Tamaño reducido */
+    font-size: 1.4rem;
     color: #679dff;
     margin-top: 15px;
     z-index: 1;
 }
 
 .flip-card-front p {
-    font-size: 0.9rem; /* Tamaño reducido */
+    font-size: 0.9rem;
     color: #333;
     padding: 0 10px;
     margin-top: auto;
@@ -255,7 +233,7 @@ body {
 }
 
 .flip-card-back h3 {
-    font-size: 1.4rem; /* Tamaño reducido */
+    font-size: 1.4rem;
     color: #679dff;
     margin-bottom: 10px;
 }
@@ -263,10 +241,10 @@ body {
 .flip-card-back ul {
     list-style-type: none;
     padding: 0;
-    font-size: 0.9rem; /* Tamaño reducido */
+    font-size: 0.9rem;
     color: #333;
     margin-top: 10px;
-    flex-grow: 1; /* Para ocupar el espacio restante */
+    flex-grow: 1;
 }
 
 .flip-card-back ul li {
@@ -276,7 +254,6 @@ body {
     line-height: 1.5;
 }
 
-/* Botón de llamada a la acción */
 .cta-button {
     background-color: #679dff;
     color: #fff;
@@ -286,7 +263,7 @@ body {
     transition: background-color 0.3s ease;
     margin-top: 20px;
     align-self: center;
-    margin-bottom: 10px; /* Espacio inferior */
+    margin-bottom: 10px;
 }
 
 .cta-button:hover {
@@ -307,17 +284,13 @@ body {
     }
 }
 
-
 /* Elementos generales extra */
-
-/* Para garantizar que el padding esté aplicado correctamente en todas las secciones */
 body, html {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Ajustes para mantener el header fijo y que no interrumpa la visualización */
 header {
     position: fixed;
     top: 0;
@@ -330,38 +303,35 @@ header {
 .final-cta {
     text-align: center;
     padding: 50px 20px;
-    background-color: #679dff; /* Fondo con color corporativo */
+    background-color: #679dff;
 }
 
 .final-cta h2 {
     font-size: 2.5rem;
-    color: #ffffff; /* Texto en blanco para contraste */
+    color: #ffffff;
 }
 
 .final-cta p {
     font-size: 1.2rem;
-    color: #ffffff; /* Texto en blanco */
+    color: #ffffff;
     margin-bottom: 30px;
 }
 
-/* Botón principal */
 .final-cta a.cta-button {
     margin: 10px;
     padding: 15px 30px;
-    background-color: #0073e6; /* Botón en tono más claro */
+    background-color: #0073e6;
     color: #ffffff;
     border-radius: 5px;
     font-size: 1.2rem;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s ease; /* Animación */
+    transition: background-color 0.3s, transform 0.3s ease;
 }
 
-/* Hover del botón principal y secundario */
 .final-cta a.cta-button:hover {
-    background-color: #69ffd1; /* Verde corporativo para el hover */
+    background-color: #69ffd1;
     transform: scale(1.05);
 }
-
 
 /* Footer */
 .footer {
@@ -390,7 +360,7 @@ header {
 }
 
 .footer-content .socials a:hover {
-    color: #00A9E0; /* Azul claro */
+    color: #00A9E0;
 }
 
 .footer-content p, .footer a {
