@@ -29,15 +29,6 @@ body {
     justify-content: space-between;
 }
 
-.header {
-    background-color: #0052a5;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
 
 .nav {
     display: flex;
