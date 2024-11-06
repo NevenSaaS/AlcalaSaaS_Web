@@ -1,0 +1,599 @@
+/* Tipografía y cuerpo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff, #ffffff, #50e3c2); /* Gradiente aplicado */
+    color: #333;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4B0082;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Banner de fondo para el header */
+.banner-header {
+    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+    display: flex; /* Añade flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+}
+
+.header {
+    background-color: #0052a5;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-left: auto; /* Empuja los enlaces hacia la derecha */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #AD8FFF;
+    transform: scale(1.1);
+}
+/* Elimina cualquier margen superior adicional después del encabezado */
+body, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    margin-top: 120px;
+}
+
+/* Estilo para centrar el logo correctamente */
+.pricing-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Esto centrará el contenido horizontalmente */
+    justify-content: center; /* Centra verticalmente si el contenedor tiene altura */
+    text-align: center; /* Alinea todo el texto en el centro */
+    margin-top: 200px;
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.logo-central {
+    display: block;
+    margin: 0 auto; /* Asegura que esté centrado horizontalmente */
+    max-width: 500px;
+    height: auto;
+    animation: shrinkLogo 2s ease forwards; /* Aplica la animación */
+}
+
+/* Keyframes para la animación del logo (comienza más grande y se reduce al tamaño original) */
+@keyframes shrinkLogo {
+    0% {
+        opacity: 0;
+        transform: scale(1.5); /* El logo comienza con 1.5 veces su tamaño */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* El logo termina con su tamaño original */
+    }
+}
+
+
+/* Sección de Planes de Precios */
+.pricing {
+    padding: 10px 10px;
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.pricing h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.plan-details {
+    display: none;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto introductorio de la sección de planes */
+.pricing p {
+    font-size: 1rem;
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* Contenedor de los planes */
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Estilos de cada plan */
+.plan {
+    background-color: white;
+    border: 2px solid #d0d0d0;
+    border-radius: 10px;
+    width: 18%;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan .price,
+.plan .initial {
+    color: #000000; /* Precio y pago inicial en negro */
+    font-weight: bold; /* Asegura que el texto del precio esté en negrita */
+}
+
+/* Ajuste de "Precio a Consultar" en plan personalizado */
+.plan.personalizado .price {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1.5rem; /* Ajusta para alinear con las otras tarjetas */
+    margin-bottom: 0.5rem;
+}
+
+.plan ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.plan ul li {
+    margin-bottom: 20px; /* Aumenta el espacio entre líneas */
+    font-size: 1rem;
+}
+
+.plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Básico */
+.plan.basico {
+    border-color: #4EA1F0;
+}
+
+.plan.basico h2 {
+    color: #4EA1F0;
+}
+
+.plan.basico .cta-button,
+.plan.basico .cta-button-ver-mas {
+    background-color: #4EA1F0;
+}
+
+.plan.basico .cta-button-ver-mas:hover,
+.plan.basico .cta-button:hover {
+    background-color: #357CB8;
+}
+
+/* Plan Extra */
+.plan.extra {
+    border-color: #40E0D0;
+}
+
+.plan.extra h2 {
+    color: #40E0D0;
+}
+
+.plan.extra .cta-button,
+.plan.extra .cta-button-ver-mas {
+    background-color: #40E0D0;
+}
+
+.plan.extra .cta-button-ver-mas:hover,
+.plan.extra .cta-button:hover {
+    background-color: #32BBA6;
+}
+
+/* Plan Premium */
+.plan.premium {
+    border-color: #B57EDC;
+}
+
+.plan.premium h2 {
+    color: #B57EDC;
+}
+
+.plan.premium .cta-button,
+.plan.premium .cta-button-ver-mas {
+    background-color: #B57EDC;
+}
+
+.plan.premium .cta-button-ver-mas:hover,
+.plan.premium .cta-button:hover {
+    background-color: #8E64B2;
+}
+
+/* Plan Personalizado en tonos grises */
+.plan.personalizado {
+    border-color: #A0A0A0;
+    background-color: #ffffff;
+}
+
+.plan.personalizado h2 {
+    color: #707070;
+}
+
+.plan.personalizado .cta-button,
+.plan.personalizado .cta-button-ver-mas {
+    background-color: #A0A0A0;
+}
+
+.plan.personalizado .cta-button-ver-mas:hover,
+.plan.personalizado .cta-button:hover {
+    background-color: #707070;
+}
+
+/* Estilo para el logo de cada plan */
+.plan-logo {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
+}
+
+/* Contenedor de los botones */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: auto; /* Alinea los botones al fondo de la tarjeta */
+}
+
+/* Ajustes de los botones Ver Más y Contacto */
+.cta-button, .cta-button-ver-mas {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    width: auto;
+    min-width: 80px; /* Mantiene el tamaño mínimo */
+    text-align: center;
+    color: #fff !important; /* Asegura el color blanco del texto */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    border: none; /* Elimina el borde del botón */
+}
+
+/* Sección de Servicios Adicionales */
+.additional-services {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.additional-services h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.additional-services p {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedor de tarjetas cuadradas */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Tarjetas de Servicio */
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px; /* Ajusta el tamaño cuadrado */
+    height: 200px; /* Ajusta el tamaño cuadrado */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #0052a5;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Efecto Hover en las tarjetas */
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333; /* Fondo oscuro */
+    padding: 2rem;
+    text-align: center;
+    color: white; /* Texto en blanco */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content .socials {
+    margin-bottom: 1rem;
+}
+
+.footer-content .socials a {
+    color: white; /* Iconos en blanco */
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content .socials a:hover {
+    color: #00A9E0; /* Cambiar a color azul claro al pasar por encima */
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: white !important; /* Forzar el color blanco */
+}
+
+.footer p a {
+    color: white !important; /* Asegura que los enlaces dentro del pie también sean blancos */
+    text-decoration: none;
+}
+
+.footer p a:hover {
+    color: #00A9E0;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        padding: 0; /* Quitar cualquier padding sobrante */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Reducir aún más el tamaño del texto */
+        padding: 5px 0;  /* Ajustar el padding de los enlaces */
+    }
+
+    .header {
+        padding: 0.5px 0;  /* Reducir más el padding en la cabecera */
+    }
+    
+    .logo img {
+        width: 90px; /* Reducir el tamaño del logo para que ocupe menos espacio */
+    }
+    
+    .hero {
+        padding: 30px 20px; /* Reducir aún más el padding en móviles */
+        background: rgba(255, 255, 255, 0.95); /* Aumentar transparencia */
+        margin-top: 30px; /* Ajuste para que el contenido no se solape con el encabezado */
+    }
+
+    .hero h1 {
+        font-size: 1.6rem; /* Reducir el tamaño del título */
+        margin-bottom: 8px; /* Ajustar el margen inferior */
+    }
+
+    .hero p {
+        font-size: 0.95rem; /* Ajustar el tamaño del texto */
+    }
+
+    .cta-button {
+        padding: 6px 12px; /* Ajustar el botón */
+        font-size: 0.85rem; /* Reducir el tamaño de la fuente en el botón */
+    }
+
+    /* Ajustes en la animación del fade-in */
+    .fade-in {
+        margin-top: 20px; /* Añadir un margen superior al fade-in */
+        animation: fadeInEffect 1s ease-in-out; /* Aplicar el efecto de animación */
+    }
+
+    @keyframes fadeInEffect {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px); /* Comienza movido un poco hacia arriba */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Termina en su posición original */
+        }
+    }
+
+    /* Ajustes en la integración de WhatsApp */
+    .whatsapp-integration h2 {
+        font-size: 1.2rem; /* Reducir el tamaño del encabezado */
+        margin-bottom: 12px; /* Ajustar margen inferior */
+    }
+
+    .whatsapp-integration p {
+        font-size: 0.9rem; /* Ajustar el tamaño del texto */
+        line-height: 1.3; /* Mejorar la legibilidad */
+        margin-bottom: 18px;
+    }
+
+    /* Ajustes en la sección de características */
+    .features-grid {
+        flex-direction: column;  /* Colocar las características en una sola columna */
+        gap: 1rem;  /* Espaciado ajustado */
+    }
+
+    .feature-item i {
+        font-size: 1.8rem;  /* Reducir el tamaño de los íconos */
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;  /* Reducir tamaño del texto */
+        margin-bottom: 8px; /* Ajustar márgenes */
+    }
+
+    .feature-item p {
+        font-size: 0.85rem; /* Ajustar el tamaño del texto */
+        margin-bottom: 8px;
+    }
+
+    /* Ajustes en la sección de testimonios */
+    .testimonials {
+        padding: 2.5rem 1rem; /* Reducir el padding */
+    }
+
+    .testimonials h2 {
+        font-size: 1.6rem; /* Reducir el tamaño del título */
+        margin-bottom: 1.2rem;
+    }
+
+    /* Ajustes en la sección de llamada a la acción */
+    .cta {
+        padding: 2.5rem 1rem;
+    }
+
+    .cta h2 {
+        font-size: 1.3rem; /* Reducir el título */
+        margin-bottom: 0.8rem;
+    }
+
+    .cta-button-secondary {
+        padding: 6px 12px; /* Ajustar el tamaño del botón */
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes generales de imágenes */
+    img {
+        max-width: 100%;
+        height: auto; /* Asegurar que las imágenes se ajusten correctamente */
+    }
+
+    .footer {
+        padding: 1rem; /* Menor padding en el pie de página */
+    }
+
+    .footer-content p {
+        font-size: 0.7rem; /* Ajuste de texto del footer */
+    }
+
+    /* Menú desplegable móvil */
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0052a5;
+        padding: 5px 0;
+    }
+
+    .nav-links.mobile-active li {
+        margin: 8px 0;
+    }
+
+    /* Ocultar el menú cuando no está activo */
+    .nav-links.mobile-inactive {
+        display: none;
+    }
+
+    /* Botón para mostrar el menú en móviles */
+    .mobile-menu-button {
+        display: block;
+        background-color: #0052a5;
+        color: white;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    /* Ocultar el botón de menú en pantallas grandes */
+    @media (min-width: 769px) {
+        .mobile-menu-button {
+            display: none;
+        }
+    }
+}

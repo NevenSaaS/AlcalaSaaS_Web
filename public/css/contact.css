@@ -1,0 +1,327 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos globales */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #69ffd1 100%); /* Gradiente aplicado */
+    color: #333;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4B0082;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Banner de fondo para el header */
+.banner-header {
+    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+    display: flex; /* Añade flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+}
+
+.header {
+    background-color: #0052a5;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-left: auto; /* Empuja los enlaces hacia la derecha */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #AD8FFF;
+    transform: scale(1.1);
+}
+/* Espacio superior para evitar que el contenido se superponga con el header */
+.content {
+    margin-top: 120px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem; /* Espaciado general */
+    background-color: transparent; /* Hacemos que el fondo del hero sea transparente */
+    color: #333;
+}
+
+.hero-logo {
+    width: 500px; /* Ajuste del tamaño del logo */
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 7rem;
+    animation: fadeInLogo 3s ease forwards; /* Animación de agrandar el logo */
+}
+
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #4B0082;
+    animation: fadeInText 3s ease forwards; 
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    animation: fadeInText 3s ease forwards; 
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección de Contacto */
+.contact {
+    padding: 4rem 1rem;
+    background-color: transparent; /* Fondo transparente para que el gradiente prevalezca */
+    text-align: center;
+}
+
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0052A3;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: white;
+    appearance: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4B0082;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.form-group textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/* Botón de llamada a la acción */
+.cta-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4B0082;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.cta-button:hover {
+    background-color: #7B61FF;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Sección de llamada a la acción */
+.cta {
+    padding: 3rem 1rem;
+    background-color: transparent; /* Transparente para mantener el gradiente */
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #00aaff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.cta-button-secondary:hover {
+    background-color: #007bb5;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .socials {
+    margin-bottom: 1rem;
+}
+
+.footer .socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color: #00A9E0; /* Color al hacer hover en los iconos sociales */
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: white !important; /* Forzar el color blanco */
+}
+
+.footer p a {
+    color: white !important; /* Asegura que los enlaces dentro del pie también sean blancos */
+    text-decoration: none;
+}
+
+.footer p a:hover {
+    color: #00A9E0;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+        padding: 5px 0;
+    }
+
+    .header {
+        padding: 0.5px 0;
+    }
+    
+    .logo img {
+        width: 90px;
+    }
+    
+    .hero {
+        padding: 30px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        margin-top: 30px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .cta-button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}

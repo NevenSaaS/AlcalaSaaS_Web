@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes y Precios de NEVEN - Automatización de Reservas y Atención al Cliente</title>
+    <meta name="description" content="Consulta los planes y precios de NEVEN Business Solutions. Automatiza la gestión de reservas, pagos en línea y la atención al cliente con inteligencia artificial.">
+    <meta name="keywords" content="precios automatización, gestión de reservas, IA para negocios, atención al cliente automatizada, pagos en línea, SaaS para autónomos, WhatsApp para empresas">
+    <link rel="stylesheet" href="css/pricing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header banner-header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="/css/NV COMPLETO.svg" alt="Logo de NEVEN Business Solutions - Automatización de IA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" title="Inicio NEVEN">Inicio</a></li>
+                <li><a href="features.html" title="Características de NEVEN">Servicios</a></li>
+                <li><a href="pricing.html" title="Planes y Precios de NEVEN">Precios</a></li>
+                <li><a href="quienes_somos.html" title="Que es Neven">¿Quienes somos?</a></li>
+                <li><a href="contact.html" title="Contacto NEVEN">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Planes de Precios -->
+    <section class="pricing">
+        <div class="logo-central-container">
+            <img src="/css/NV COMPLETO.svg" alt="Logo de NEVEN Business Solutions" class="logo-central">
+        </div>
+        <h1>Planes y Precios</h1>
+        <p>Elige el plan que mejor se adapte a las necesidades de tu negocio. Ofrecemos opciones desde automatización básica hasta soluciones avanzadas con soporte multicanal y personalización.</p>
+        <div class="plans">
+            <!-- Plan Básico -->
+            <div class="plan basico">
+                <img src="/css/AZUL C.svg" alt="Logo del Plan Básico NEVEN" class="plan-logo">
+                <h2>Básico</h2>
+                <p class="price">75€ / Mes</p>
+                <p class="initial">Desde 100€ Pago inicial</p>
+                <ul>
+                    <li>Gestión de Citas/Reservas</li>
+                    <li>Cancelación de Citas/Reservas</li>
+                    <li>Soporte para WhatsApp</li>
+                    <li>Modificaciones bajo demanda</li>
+                </ul>
+                <div class="cta-container">
+                    <button class="cta-button-ver-mas" onclick="toggleDetails('basico-details')">Ver más</button>
+                    <a href="contact.html" class="cta-button" title="Contacta para el plan básico de NEVEN" onclick="setPlan('basico')">Contacto</a>
+                </div>
+                <div id="basico-details" class="plan-details">
+                    <p>Este plan incluye las funcionalidades básicas para gestionar tus citas y reservas, con soporte para WhatsApp. Otros SERVICIOS ADICIONALES* bajo coste añadido.</p>
+                </div>
+            </div>
+    
+            <!-- Plan Extra -->
+            <div class="plan extra">
+                <img src="/css/VERDE C.svg" alt="Logo del Plan Extra NEVEN" class="plan-logo">
+                <h2>Extra</h2>
+                <p class="price">100€ / Mes</p>
+                <p class="initial">Desde 500€ Pago inicial</p>
+                <ul>
+                    <li>Gestión de Citas/Reservas</li>
+                    <li>Confirmación automática</li>
+                    <li>Soporte para WhatsApp y Web</li>
+                    <li>Servicio a domicilio</li>
+                    <li>Modificación gratuita mensual</li>
+                </ul>
+                <div class="cta-container">
+                    <button class="cta-button-ver-mas" onclick="toggleDetails('extra-details')">Ver más</button>
+                    <a href="contact.html" class="cta-button" title="Contacta para el plan Extra de NEVEN" onclick="setPlan('extra')">Contacto</a>
+                </div>
+                <div id="extra-details" class="plan-details">
+                    <p>Este plan incluye soporte adicional para la web, confirmación automática y un servicio de domicilio exclusivo. Otros SERVICIOS ADICIONALES* bajo coste añadido.</p>
+                </div>
+            </div>
+    
+            <!-- Plan Premium -->
+            <div class="plan premium">
+                <img src="/css/MORADO C.svg" alt="Logo del Plan Premium NEVEN" class="plan-logo">
+                <h2>Premium</h2>
+                <p class="price">250€ / Mes</p>
+                <p class="initial">Desde 1000€ Pago inicial</p>
+                <ul>
+                    <li>Pagos en Línea</li>
+                    <li>Soporte Multilenguaje</li>
+                    <li>Motor de Recomendaciones</li>
+                    <li>Reseñas y Encuestas</li>
+                    <li>4 Modificaciones de Servicio al mes</li>
+                </ul>
+                <div class="cta-container">
+                    <button class="cta-button-ver-mas" onclick="toggleDetails('premium-details')">Ver más</button>
+                    <a href="contact.html" class="cta-button" title="Contacta para el plan Premium de NEVEN" onclick="setPlan('premium')">Contacto</a>
+                </div>
+                <div id="premium-details" class="plan-details">
+                    <p>El plan Premium incluye un completo paquete con soporte para múltiples idiomas, reseñas, encuestas y mucho más. Otros SERVICIOS ADICIONALES* bajo coste añadido.</p>
+                </div>
+            </div>
+    
+            <!-- Plan Personalizado -->
+            <div class="plan personalizado">
+                <img src="/css/MORADO C.svg" alt="Logo del Plan Personalizado NEVEN" class="plan-logo">
+                <h2>Servicio Personalizado</h2>
+                <p class="price">Precio a Consultar</p>
+                <ul>
+                    <li>Si desea un servicio adaptado</li>
+                    <li>contáctenos sin compromiso,</li>
+                    <li>y le proporcionaremos una solución</li>
+                    <li>personalizada para su negocio.</li>
+                </ul>
+                <div class="cta-container">
+                    <a href="contact.html" class="cta-button" title="Contacta para el servicio personalizado de NEVEN" onclick="setPlan('personalizado')">Contacto</a>
+                </div>
+            </div>                      
+        </div>
+    </section>
+    <!-- Servicios Adicionales -->
+    <section class="additional-services">
+        <h2>Servicios Adicionales</h2>
+        <p>Ofrecemos una variedad de servicios adicionales para potenciar aún más tu negocio.</p>
+        <div class="services-grid">
+            <!-- Tarjeta de Diseño Gráfico -->
+            <div class="service-card">
+                <h3>Diseño Gráfico</h3>
+                <p>Transforma la imagen de tu marca con diseños atractivos y profesionales.</p>
+            </div>
+            
+            <!-- Tarjeta de Diseño Web -->
+            <div class="service-card">
+                <h3>Diseño UX/UI</h3>
+                <p>Desarrollamos sitios web personalizados para mejorar la presencia digital de tu negocio.</p>
+            </div>
+
+            <!-- Tarjeta de Branding -->
+            <div class="service-card">
+                <h3>Branding</h3>
+                <p>Construye una identidad de marca sólida y coherente para conectar mejor con tus clientes.</p>
+            </div>
+
+            <!-- Tarjeta de SEO -->
+            <div class="service-card">
+                <h3>SEO</h3>
+                <p>Optimiza tu sitio web para mejorar su visibilidad en motores de búsqueda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="socials">
+                <a href="https://facebook.com/neven" title="Síguenos en Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/neven" title="Síguenos en Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/neven" title="Síguenos en LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://whatsapp.com/neven" title="Contáctanos por WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 NEVEN Business Solutions. Todos los derechos reservados.</p>
+            <p><a href="privacy.html">Política de privacidad</a> | <a href="terms.html">Términos de servicio</a></p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

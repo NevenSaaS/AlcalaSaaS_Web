@@ -1,0 +1,755 @@
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff); /* Colores suaves y perlados */
+    background-size: 400% 400%;
+    animation: gradientAnimation 30s ease infinite;
+    color: #333; /* Color del texto en general */
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Banner de fondo para el header */
+.banner-header {
+    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+    display: flex; /* Añade flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+}
+
+.header {
+    background-color: #0052a5;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-left: auto; /* Empuja los enlaces hacia la derecha */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #AD8FFF;
+    transform: scale(1.1);
+}
+
+/* Hero Section Mejorada */
+.hero-neven {
+    position: relative;
+    height: 100vh; /* Ajusta la altura según tus preferencias */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Gradiente de fondo */
+.hero-neven::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffffff 25%, #ffffff 50%, #69ffd1 75%);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero-top {
+    margin-top: 150px;
+    margin-bottom: 20px;
+    animation: fadeInLogo 2s ease forwards;
+}
+
+.logo-hero {
+    width: 500px;
+    margin-bottom: 10px;
+    animation: fadeInLogo 2s ease forwards;
+}
+
+.hero-top h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    animation: fadeInText 2.5s ease forwards;
+}
+
+.hero-bottom {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    width: 40%;
+    height: auto;
+    object-fit: cover; /* Asegura que el GIF se adapte al contenedor */
+    border-radius: 10px;
+}
+
+
+.hero-right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Contenedor para el texto y el botón */
+.text-and-button-container {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilo para el título */
+.text-and-button-container h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    animation: fadeInText 2.5s ease forwards;
+}
+
+
+/* Estilo para el párrafo */
+.text-and-button-container p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilo para el botón */
+.cta-button {
+    padding: 12px 24px;
+    background-color: #679dff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background-color: #69ffd1;
+    color: #333;
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px); /* Comienza un poco más arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Comienza más abajo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+
+/* Sección de Integración de WhatsApp */
+.whatsapp-integration {
+    position: relative;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Gradiente de fondo invertido para la sección de WhatsApp */
+.whatsapp-integration::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background: linear-gradient(220deg, #69ffd1 30%, #ffffff 60%, #ffffff 75%);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Icono de WhatsApp */
+.whatsapp-integration i {
+    color: #25D366;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Encabezado de la sección */
+.whatsapp-integration h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+/* Texto descriptivo */
+.whatsapp-integration p {
+    color: #333;
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Botón secundario */
+.whatsapp-integration .cta-button-secondary {
+    background-color: #25D366;
+    color: #000;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeIn 2.5s ease forwards;
+}
+
+.whatsapp-integration .cta-button-secondary:hover {
+    background-color: #69ffd1;
+    transform: scale(1.05);
+}
+
+/* Animaciones para los elementos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contenedor general */
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    align-items: stretch;
+    margin-top: 50px;
+    gap: 30px;
+}
+
+/* Estilos para las tarjetas */
+.pricing-card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 18%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.basic-card { border: 3px solid #679dff; }
+.extra-card { border: 3px solid #69ffd1; }
+.premium-card { border: 3px solid #AD8FFF; }
+.personalized-card { border: 3px solid #A0A0A0; }
+
+.pricing-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plan-logo {
+    width: 40px;
+    height: auto;
+    margin: 0 auto 20px auto;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pricing-card ul li {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+.basic-heading { color: #679dff; }
+.extra-heading { color: #69ffd1; }
+.premium-heading { color: #AD8FFF; }
+.personalized-heading { color: #A0A0A0; }
+
+.pricing-highlight {
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+}
+
+/* Contenedor de botones en línea */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: center;
+    flex: 1;
+}
+
+.basic-card .btn { background-color: #679dff; }
+.extra-card .btn { background-color: #69ffd1; }
+.premium-card .btn { background-color: #AD8FFF; }
+.personalized-card .btn { background-color: #A0A0A0; }
+
+.btn:hover {
+    opacity: 0.8;
+    color: #000000;
+}
+
+
+/* Ajustes de responsive */
+@media (max-width: 1024px) {
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 80%; /* Más ancho en pantallas más pequeñas */
+        min-height: auto; /* Sin restricción de altura mínima */
+        margin-bottom: 40px; /* Espacio inferior entre tarjetas */
+    }
+}
+
+
+/* Features Section */
+.features {
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco suave */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #4B0082; /* Color púrpura para destacar */
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    color: #4B0082;
+    flex-basis: 30%;
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #69ffd1;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+}
+
+.feature-item p {
+    font-size: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco suave */
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0052A3;
+}
+
+.slider {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+}
+
+.slide p, .slide h3 {
+    text-align: center;
+}
+
+.slider-nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-nav span {
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 1rem;
+    color: #0052A3;
+}
+
+.slider-nav span:hover {
+    color: #4B0082;
+}
+
+/* CTA final */
+.final-cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #679dff; /* Fondo con color corporativo */
+}
+
+.final-cta h2 {
+    font-size: 2.5rem;
+    color: #ffffff; /* Texto en blanco para contraste */
+}
+
+.final-cta a.cta-button {
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #0073e6; /* Botón en tono más claro */
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none; /* Quitar el subrayado */
+    transition: background-color 0.3s, transform 0.3s ease; /* Animación */
+}
+
+/* Hover del botón */
+.final-cta a.cta-button:hover {
+    background-color: #69ffd1; /* Verde corporativo para el hover */
+    color: #333;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #333; /* Fondo oscuro */
+    padding: 2rem;
+    text-align: center;
+    color: white; /* Texto en blanco */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content .socials {
+    margin-bottom: 1rem;
+}
+
+.footer-content .socials a {
+    color: white; /* Iconos en blanco */
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-content .socials a:hover {
+    color: #69ffd1; /* Cambiar a color azul claro al pasar por encima */
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem; /* Tamaño de fuente ajustado */
+}
+
+.footer-content p a {
+    color: white; /* Links en blanco */
+    text-decoration: none;
+}
+
+.footer-content p a:hover {
+    color: #69ffd1; /* Color azul claro en hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+        padding: 0; /* Quitar cualquier padding sobrante */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem; /* Reducir aún más el tamaño del texto */
+        padding: 5px 0;  /* Ajustar el padding de los enlaces */
+    }
+
+    .header {
+        padding: 0.5px 0;  /* Reducir más el padding en la cabecera */
+    }
+    
+    .logo img {
+        width: 90px; /* Reducir el tamaño del logo para que ocupe menos espacio */
+    }
+    
+    .hero {
+        padding: 30px 20px; /* Reducir aún más el padding en móviles */
+        background: rgba(255, 255, 255, 0.95); /* Aumentar transparencia */
+        margin-top: 30px; /* Ajuste para que el contenido no se solape con el encabezado */
+    }
+
+    .hero h1 {
+        font-size: 1.6rem; /* Reducir el tamaño del título */
+        margin-bottom: 8px; /* Ajustar el margen inferior */
+    }
+
+    .hero p {
+        font-size: 0.95rem; /* Ajustar el tamaño del texto */
+    }
+
+    .cta-button {
+        padding: 6px 12px; /* Ajustar el botón */
+        font-size: 0.85rem; /* Reducir el tamaño de la fuente en el botón */
+    }
+
+    /* Ajustes en la animación del fade-in */
+    .fade-in {
+        margin-top: 20px; /* Añadir un margen superior al fade-in */
+        animation: fadeInEffect 1s ease-in-out; /* Aplicar el efecto de animación */
+    }
+
+    @keyframes fadeInEffect {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px); /* Comienza movido un poco hacia arriba */
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0); /* Termina en su posición original */
+        }
+    }
+
+    /* Ajustes en la integración de WhatsApp */
+    .whatsapp-integration h2 {
+        font-size: 1.2rem; /* Reducir el tamaño del encabezado */
+        margin-bottom: 12px; /* Ajustar margen inferior */
+    }
+
+    .whatsapp-integration p {
+        font-size: 0.9rem; /* Ajustar el tamaño del texto */
+        line-height: 1.3; /* Mejorar la legibilidad */
+        margin-bottom: 18px;
+    }
+
+    /* Ajustes en la sección de características */
+    .features-grid {
+        flex-direction: column;  /* Colocar las características en una sola columna */
+        gap: 1rem;  /* Espaciado ajustado */
+    }
+
+    .feature-item i {
+        font-size: 1.8rem;  /* Reducir el tamaño de los íconos */
+    }
+
+    .feature-item h3 {
+        font-size: 1.1rem;  /* Reducir tamaño del texto */
+        margin-bottom: 8px; /* Ajustar márgenes */
+    }
+
+    .feature-item p {
+        font-size: 0.85rem; /* Ajustar el tamaño del texto */
+        margin-bottom: 8px;
+    }
+
+    /* Ajustes en la sección de testimonios */
+    .testimonials {
+        padding: 2.5rem 1rem; /* Reducir el padding */
+    }
+
+    .testimonials h2 {
+        font-size: 1.6rem; /* Reducir el tamaño del título */
+        margin-bottom: 1.2rem;
+    }
+
+
+
+    /* Ajustes generales de imágenes */
+    img {
+        max-width: 100%;
+        height: auto; /* Asegurar que las imágenes se ajusten correctamente */
+    }
+
+    .footer {
+        padding: 1rem; /* Menor padding en el pie de página */
+    }
+
+    .footer-content p {
+        font-size: 0.7rem; /* Ajuste de texto del footer */
+    }
+
+    /* Menú desplegable móvil */
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0052a5;
+        padding: 5px 0;
+    }
+
+    .nav-links.mobile-active li {
+        margin: 8px 0;
+    }
+
+    /* Ocultar el menú cuando no está activo */
+    .nav-links.mobile-inactive {
+        display: none;
+    }
+
+    /* Botón para mostrar el menú en móviles */
+    .mobile-menu-button {
+        display: block;
+        background-color: #69ffd1;
+        color: white;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    /* Ocultar el botón de menú en pantallas grandes */
+    @media (min-width: 769px) {
+        .mobile-menu-button {
+            display: none;
+        }
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem; /* Reducción del tamaño del título en pantallas pequeñas */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Ajuste del tamaño del párrafo en pantallas pequeñas */
+    }
+
+    .hero-text ul li {
+        font-size: 1rem; /* Ajuste del tamaño del texto de la lista en pantallas pequeñas */
+    }
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Solicita tu Prueba Gratuita | NEVEN Business Solutions</title>
+    <meta name="description" content="Solicita tu prueba gratuita y descubre cómo NEVEN Business Solutions puede automatizar la atención al cliente de tu negocio con IA. Mejora la eficiencia y experiencia de usuario con nuestra plataforma.">
+    <meta name="keywords" content="prueba gratuita, automatización de reservas, atención al cliente IA, chatbots para empresas, soluciones de IA para negocios, WhatsApp para empresas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header banner-header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="/css/NV COMPLETO.svg" alt="NEVEN Business Solutions - Automatización IA">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="features.html">Servicios</a></li>
+                <li><a href="pricing.html">Precios</a></li>
+                <li><a href="quienes_somos.html" title="Que es Neven">¿Quienes somos?</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero fade-in">
+        <img src="/css/NV COMPLETO.svg" alt="Neven Logo" class="hero-logo" id="hero-logo">
+        <h1>Solicita tu Prueba Gratuita</h1>
+        <p>Descubre cómo los asistentes virtuales de Neven pueden transformar la atención al cliente en tu negocio.</p>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <form id="demo-form" class="form">
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre">
+                <span class="error-message" id="name-error"></span> <!-- Error de nombre -->
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Tu email">
+                <span class="error-message" id="email-error"></span> <!-- Error de email -->
+            </div>
+            <div class="form-group">
+                <label for="business">Nombre del Negocio</label>
+                <input type="text" id="business" name="business" placeholder="Nombre de tu negocio">
+                <span class="error-message" id="business-error"></span> <!-- Error del negocio -->
+            </div>
+            <!-- Nuevo campo: Plan Seleccionado -->
+            <div class="form-group">
+                <label for="plan">Plan Seleccionado</label>
+                <select id="plan" name="plan">
+                    <option value="basico">Básico</option>
+                    <option value="extra">Extra</option>
+                    <option value="premium">Premium</option>
+                    <option value="personalizado">Personalizado</option>
+                </select>
+                <span class="error-message" id="plan-error"></span> <!-- Error del plan -->
+            </div>
+            <!-- Nuevo campo: Descripción -->
+            <div class="form-group">
+                <label for="description">Breve Descripción de tu Negocio</label>
+                <textarea id="description" name="description" placeholder="Describe brevemente tu negocio"></textarea>
+                <span class="error-message" id="description-error"></span> <!-- Error de descripción -->
+            </div>
+            <button type="submit" class="cta-button">Solicitar Prueba Gratuita</button>
+        </form>
+        <!-- Mensaje de éxito -->
+        <p id="success-message" style="display: none; color: green;">Correo enviado correctamente.</p>
+        <p id="error-message" style="display: none; color: red;">Error al enviar el correo. Inténtalo de nuevo.</p>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta scale-up">
+        <h2>¿Listo para mejorar la atención al cliente de tu negocio?</h2>
+        <a href="pricing.html" class="cta-button-secondary">Ver todos los planes</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="socials">
+            <a href="https://facebook.com/neven" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/neven" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/neven" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://whatsapp.com/neven" title="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; 2024 NEVEN Business Solutions. Todos los derechos reservados.</p>
+        <p><a href="privacy.html">Política de privacidad</a> | <a href="terms.html">Términos de servicio</a></p>
+    </footer>
+
+    <!-- JavaScript para manejar la selección del plan y la personalización del logo -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const plan = localStorage.getItem('selectedPlan') || 'basico'; // Obtener el plan seleccionado, por defecto 'basico'
+            const heroLogo = document.getElementById('hero-logo');
+            const planInput = document.getElementById('plan'); // Campo del plan
+    
+            let logoSrc = '';
+    
+            // Establece el logo inicial en función del plan guardado
+            function actualizarLogoYFondo(planSeleccionado) {
+                switch (planSeleccionado) {
+                    case 'basico':
+                        logoSrc = '/css/LOGO 400x200/SVG/NA COMPLETO.svg'; // Cambiar por la ruta correcta del logo básico
+                        break;
+                    case 'extra':
+                        logoSrc = '/css/LOGO 400x200/SVG/NV COMPLETO.svg'; // Cambiar por la ruta correcta del logo extra
+                        break;
+                    case 'premium':
+                        logoSrc = '/css/LOGO 400x200/SVG/NM COMPLETO.svg'; // Cambiar por la ruta correcta del logo premium
+                        break;
+                    case 'personalizado':
+                        logoSrc = '/css/LOGO 400x200/SVG/NM COMPLETO.svg'; // Cambiar por la ruta correcta del logo premium
+                        break;
+                }
+    
+                // Actualizar el logo y el fondo
+                heroLogo.src = logoSrc;
+                planInput.value = planSeleccionado; // Establece el valor del campo select al plan seleccionado
+            }
+    
+            // Establecer el logo y el fondo inicialmente
+            actualizarLogoYFondo(plan);
+    
+            // Manejar el cambio de selección del plan
+            planInput.addEventListener('change', function() {
+                const selectedPlan = planInput.value;
+                actualizarLogoYFondo(selectedPlan);
+            });
+        });
+    </script>
+
+    <script src="js/contact.js"></script> <!-- Archivo JS para validaciones -->
+</body>
+</html>

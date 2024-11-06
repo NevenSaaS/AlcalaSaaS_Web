@@ -1,0 +1,547 @@
+/* Importar Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos globales */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body cubra todo el viewport */
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #69ffd1 100%);/* Gradiente aplicado con tus colores corporativos */
+    color: #333;
+    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #4B0082;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* Banner de fondo para el header */
+.banner-header {
+    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px; /* Ajusta la altura según lo que necesites */
+    display: flex; /* Añade flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Asegura que el contenido (logo y menú) esté separado */
+}
+
+.header {
+    background-color: #0052a5;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.logo img {
+    width: 130px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Espacio entre los enlaces */
+    margin-left: auto; /* Empuja los enlaces hacia la derecha */
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #AD8FFF;
+    transform: scale(1.1);
+}
+
+/* Ajustes para la sección Hero */
+.hero {
+    min-height: 70vh; /* Altura mínima de la sección hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    padding: 0 20px;
+    position: relative;
+    background-color: transparent; /* Fondo transparente para el gradiente */
+    margin-top: 130px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+/* Animación para el logo */
+.logo-animation {
+    width: 500px; /* Tamaño más pequeño del logo */
+    margin-top: 20px;
+    animation: scaleIn 1.5s ease forwards; /* Aplica la animación */
+    opacity: 0;
+}
+
+/* Definición de la animación */
+@keyframes scaleIn {
+    0% {
+        transform: scale(1.5); /* Inicia más grande */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Tamaño original */
+        opacity: 1;
+    }
+}
+
+
+/* Estilo para la sección introducción */
+.introduccion-section .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-left {
+    flex: 1;
+    margin-right: 20px; /* Espaciado entre el texto y la imagen */
+    text-align: left; /* Mantiene el texto alineado a la izquierda */
+}
+
+.text-left h2 {
+    font-size: 2.5rem;
+    color: #000000; /* Color corporativo para el título */
+    margin-bottom: 20px;
+    text-align: center; /* Centra solo el título "Nuestro Propósito" */
+}
+
+.text-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center; /* Mantiene el texto alineado a la izquierda */
+}
+
+
+.image-right {
+    flex: 1;
+    text-align: right;
+}
+
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borde redondeado para la imagen */
+}
+
+/* Responsiveness para pantallas pequeñas */
+@media (max-width: 768px) {
+    .introduccion-section .section-content {
+        flex-direction: column; /* Cambia el layout a columna para pantallas pequeñas */
+        text-align: center;
+    }
+
+    .text-left {
+        margin-right: 0;
+        margin-bottom: 20px; /* Añade un margen inferior para separar el texto de la imagen */
+    }
+
+    .image-right {
+        text-align: center;
+    }
+
+    .image-right img {
+        max-width: 80%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+}
+
+/* Estilo para la sección misión */
+.mision-section .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-left {
+    flex: 1;
+    margin-right: 20px; /* Espaciado entre la imagen y el texto */
+    text-align: left;
+}
+
+.image-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borde redondeado para la imagen */
+}
+
+.text-right {
+    flex: 1;
+    margin-left: 20px; /* Espaciado entre la imagen y el texto */
+    text-align: right;
+}
+
+.text-right h2 {
+    font-size: 2.5rem;
+    color: #000000; /* Color corporativo para el título */
+    margin-bottom: 20px;
+    text-align: center; /* Centra solo el título */
+}
+
+.text-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center; /* Alinea el texto a la derecha */
+}
+
+/* Estilo para la sección visión */
+.vision-section .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-left {
+    flex: 1;
+    margin-right: 20px; /* Espaciado entre el texto y la imagen */
+    text-align: left;
+}
+
+.text-left h2 {
+    font-size: 2.5rem;
+    color: #000000; /* Color corporativo para el título */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.text-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center; /* Alinea el texto a la izquierda */
+}
+
+.image-right {
+    flex: 1;
+    text-align: right;
+}
+
+.image-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borde redondeado para la imagen */
+}
+
+
+/* Estilo para la sección historia */
+.history-section .section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-left {
+    flex: 1;
+    margin-right: 20px; /* Espaciado entre la imagen y el texto */
+    text-align: left;
+}
+
+.image-left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Borde redondeado para la imagen */
+}
+
+.text-right {
+    flex: 1;
+    text-align: right;
+}
+
+.text-right h2 {
+    font-size: 2.5rem;
+    color: #000000; /* Color del título */
+    margin-bottom: 20px;
+    text-align: center; /* Centra el título */
+}
+
+.text-right p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #333;
+    text-align: center; /* Alinea el texto a la derecha */
+}
+
+/* Sección Equipo */
+.team-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent; /* Fondo transparente */
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000000; /* Azul corporativo */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 250px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 5px solid #4B0082;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Valores de la Empresa */
+.values-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.values-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.values-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: scale(1.05);
+}
+
+.value-card i {
+    font-size: 2.5rem;
+    color: #AD8FFF; /* Color de los iconos */
+    margin-bottom: 10px;
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.value-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Compromiso con la Innovación */
+.innovation-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.innovation-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.innovation-section p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la sección CTA */
+.cta-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #679dff; /* Color corporativo para el fondo de la sección */
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Texto en blanco para resaltar sobre el fondo */
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f0f0f0; /* Texto en tono más claro */
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Color de botón acorde a la paleta corporativa */
+    color: #679dff; /* Texto en color azul */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transiciones para color, background y transformación */
+}
+
+.cta-button-secondary:hover {
+    background-color: #679dff; /* Color de fondo al hacer hover */
+    color: #ffffff; /* Color de texto blanco al hacer hover */
+    transform: scale(1.05); /* Efecto de agrandamiento suave */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer .socials {
+    margin-bottom: 1rem;
+}
+
+.footer .socials a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer .socials a:hover {
+    color:#69ffd1; /* Color al hacer hover en los iconos sociales */
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: white !important; /* Forzar el color blanco */
+}
+
+.footer p a {
+    color: white !important; /* Asegura que los enlaces dentro del pie también sean blancos */
+    text-decoration: none;
+}
+
+.footer p a:hover {
+    color: #00A9E0;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
