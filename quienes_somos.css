@@ -393,7 +393,7 @@ p {
 }
 
 .footer .socials a:hover {
-    color:#69ffd1;
+    color: #69ffd1;
 }
 
 .footer p {
@@ -412,4 +412,31 @@ p {
 }
 
 /* Responsiveness */
-@
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .team-container {
+        flex-direction: column;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+}
