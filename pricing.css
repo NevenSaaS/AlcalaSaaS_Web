@@ -30,17 +30,23 @@ p {
 
 /* Banner de fondo para el header */
 .banner-header {
-    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ajuste de ruta */
+    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ajusta la ruta de la imagen según la estructura */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100px;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+.header {
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
 
 .nav {
     display: flex;
@@ -57,13 +63,12 @@ p {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-left: auto;
 }
 
 .nav-links li {
     display: inline;
-    margin: 0 15px;
 }
 
 .nav-links a {
