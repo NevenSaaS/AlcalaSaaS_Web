@@ -8,7 +8,6 @@ html, body {
     height: 100%;
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #69ffd1 100%); /* Gradiente aplicado */
     color: #333;
-    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
 }
 
 h1 {
@@ -25,7 +24,7 @@ p {
 
 /* Banner de fondo para el header */
 .banner-header {
-    background-image: url('/css/encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

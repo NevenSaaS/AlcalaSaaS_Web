@@ -9,7 +9,6 @@ html, body {
     height: 100%; /* Asegura que el body cubra todo el viewport */
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #69ffd1 100%);
     color: #333;
-    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
 }
 
 h1 {
@@ -26,7 +25,7 @@ p {
 
 /* Banner de fondo para el header */
 .banner-header {
-    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ruta corregida */
+    background-image: url('encabezado_neven_AZUL_web_fondo_blanco_sin_logo_100.png'); /* Ajusta la ruta de la imagen según la estructura */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,13 +36,19 @@ p {
 }
 
 .header {
-    background-color: #0052a5;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra para mejorar la separación */
+    background-color: #fff; /* Añade un color de fondo para que no se mezcle con el contenido */
+}
+
+/* Añade un margen superior al contenido principal para compensar la altura del header */
+.main-content {
+    margin-top: 130px; /* Ajusta este valor según la altura del header */
 }
 
 .nav {
@@ -61,13 +66,12 @@ p {
 .nav-links {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-left: auto;
 }
 
 .nav-links li {
     display: inline;
-    margin: 0 15px;
 }
 
 .nav-links a {
@@ -93,7 +97,7 @@ p {
     padding: 0 20px;
     position: relative;
     background-color: transparent;
-    margin-top: 130px;
+    margin-top: 130px; /* Ajuste adicional para evitar solapamiento */
 }
 
 .hero h1 {
@@ -229,88 +233,6 @@ p {
     font-size: 1.2rem;
     line-height: 1.6;
     color: #555;
-    text-align: center;
-}
-
-/* Estilo para la sección visión */
-.vision-section .section-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.text-left {
-    flex: 1;
-    margin-right: 20px;
-    text-align: left;
-}
-
-.text-left h2 {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.text-left p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #555;
-    text-align: center;
-}
-
-.image-right {
-    flex: 1;
-    text-align: right;
-}
-
-.image-right img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Estilo para la sección historia */
-.history-section .section-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.image-left {
-    flex: 1;
-    margin-right: 20px;
-    text-align: left;
-}
-
-.image-left img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.text-right {
-    flex: 1;
-    text-align: right;
-}
-
-.text-right h2 {
-    font-size: 2.5rem;
-    color: #000000;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.text-right p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #333;
     text-align: center;
 }
 
@@ -470,7 +392,7 @@ p {
 }
 
 .footer .socials a:hover {
-    color:#69ffd1;
+    color: #69ffd1;
 }
 
 .footer p {
