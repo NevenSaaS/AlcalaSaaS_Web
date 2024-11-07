@@ -279,21 +279,6 @@ body {
     }
 }
 
-/* Elementos generales extra */
-body, html {
-    padding: 0;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #679dff;
-    z-index: 1000;
-}
-
 /* CTA final */
 .final-cta {
     text-align: center;
