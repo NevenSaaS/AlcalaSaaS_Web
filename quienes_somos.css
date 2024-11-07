@@ -9,7 +9,6 @@ html, body {
     height: 100%; /* Asegura que el body cubra todo el viewport */
     background: linear-gradient(135deg, #ffffff 0%, #ffffff 50%, #69ffd1 100%);
     color: #333;
-    overflow-x: hidden; /* Prevenir desbordamiento horizontal */
 }
 
 h1 {
